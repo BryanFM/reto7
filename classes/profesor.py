@@ -2,7 +2,7 @@ from connection.conn import Conexion
 
 class Profesor:
     def __init__(self):
-        self.model = Conexion('profesores')
+        self.model = Conexion('profesor')
 
     def guardar_profesor(self, profesor):
         return self.model.insert(profesor)
