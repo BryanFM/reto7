@@ -18,7 +18,7 @@ class Alumnos_controller:
                 ''')
                 menu = ['Listar alumnos', 'Buscar alumno', "Nuevo alumno", "Salir"]
                 respuesta = Menu(menu).show()
-                
+
                 if respuesta == 1:
                     self.listar_alumnos()
                 elif respuesta == 2:

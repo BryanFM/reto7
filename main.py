@@ -1,6 +1,10 @@
 from helpers.menu import Menu
 from controllers.profesores_controller import Profesores_controller
 from controllers.cursos_controller import Cursos_controller
+from controllers.malla_curricular_controller import Malla_curricular_controller
+from controllers.periodo_controller import Periodo_controller
+from controllers.alumnos_controller import Alumnos_controller
+from controllers.notas_controller import Registro_notas
 import pprint
 
 def iniciar_app():
@@ -18,20 +22,32 @@ def iniciar_app():
             if profesor.salir:
                 iniciar_app()
         elif respuesta == 2:
-            pass
+            alumno = Alumnos_controller()
+            alumno.menu()
+            if alumno.salir:
+                iniciar_app()
         elif respuesta == 3:
             curso = Cursos_controller()
             curso.menu()
             if curso.salir:
                 iniciar_app()
         elif respuesta == 4:
-            pass
+            periodo = Periodo_controller()
+            periodo.menu()
+            if periodo.salir:
+                iniciar_app()
         elif respuesta == 5:
             pass
         elif respuesta == 6:
-            pass
+            malla = Malla_curricular_controller()
+            malla.menu()
+            if malla.salir:
+                iniciar_app()
         elif respuesta == 7:
-            pass
+            notas = Registro_notas()
+            notas.menu()
+            if notas.salir:
+                iniciar_app()
 
         print("\nGracias por utilizar el sistema\n")
     except KeyboardInterrupt:
