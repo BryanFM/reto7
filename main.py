@@ -1,6 +1,7 @@
 from helpers.menu import Menu
 from controllers.profesores_controller import Profesores_controller
 from controllers.cursos_controller import Cursos_controller
+from controllers.salones_controller import Salon_controller
 from controllers.malla_curricular_controller import Malla_curricular_controller
 from controllers.periodo_controller import Periodo_controller
 from controllers.alumnos_controller import Alumnos_controller
@@ -37,7 +38,10 @@ def iniciar_app():
             if periodo.salir:
                 iniciar_app()
         elif respuesta == 5:
-            pass
+            salones = Salon_controller()
+            salones.menu()
+            if salones.salir:
+                iniciar_app()
         elif respuesta == 6:
             malla = Malla_curricular_controller()
             malla.menu()

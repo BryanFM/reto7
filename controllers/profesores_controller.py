@@ -1,8 +1,8 @@
 from classes.profesor import Profesor
 from classes.curso import Curso
 from classes.profesor_curso import Profesor_curso
-from helpers.menu import Menu
 from helpers.helper import print_table, input_data, pregunta
+from helpers.menu import Menu
 
 class Profesores_controller:
     def __init__(self):
